@@ -25,13 +25,15 @@ export async function GET(request: NextRequest) {
       })
     })
 
-    // Ustawienie odpowiednich nagłówków
+    // Konwersja Buffer → Uint8Array
+    const uint8Array = new Uint8Array(fileBuffer)
+
     const headers = new Headers()
     headers.set('Content-Type', 'audio/mpeg')
     headers.set('Content-Disposition', `attachment; filename="${file}"`)
     headers.set('Content-Length', fileBuffer.length.toString())
 
-    return new NextResponse(fileBuffer, {
+    return new NextResponse(uint8Array, {
       status: 200,
       headers
     })
