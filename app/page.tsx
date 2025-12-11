@@ -1,7 +1,7 @@
 
 
 import { useState, useRef, useEffect } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card-simple.tsx'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Play, Square, Save, Download, Mic, MicOff, Volume2 } from 'lucide-react'
