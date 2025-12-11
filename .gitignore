@@ -1,0 +1,36 @@
+# Zależności
+node_modules/
+/.pnp
+.pnp.js
+
+# Testowanie
+/coverage
+
+# Produkcja / Build
+/dist
+/build
+
+# Środowisko
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logi npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Pliki edytorów i systemów operacyjnych
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Opcjonalne: cache narzędzi
+.eslintcache
