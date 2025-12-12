@@ -1,10 +1,10 @@
 {
   /* --- INFORMACJE O PROJEKCIE ---*/
-  "name": "moj-projekt-react",
+  "name": "ps048_streaming_capture",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
-  "description": "Nowoczesny projekt React z TypeScript i Tailwind CSS",
+  "description": "projekt do ściąfgania strimingu z internetu",
 
   // --- SKRYPTY DO ZARZĄDZANIA PROJEKTEM ---
   // Te komendy uruchamiasz w terminalu (np. `npm run dev`)
