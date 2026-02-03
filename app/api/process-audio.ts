@@ -42,11 +42,26 @@ export async function POST(request: NextRequest) {
     Plik audio zawiera strumieniowanie z internetu z reklamami.
     
     Zwróć informacje o:
-    - Czas trwania nagrania
+    - Czas trwania nagrania (format HH:MM:SS)
     - Zidentyfikowane fragmenty reklam (czas rozpoczęcia i zakończenia)
     - Procent zawartości reklamowej
     - Czas trwania wersji filtrowanej
+    
+    Odpowiedź zwróć w formacie JSON.
     `
+
+    const audioResponse = await zai.processAudio({
+      filePath: originalPath,
+      prompt: processingPrompt,
+      outputFormats: ['mp3']
+    })
+
+    if (audioResponse?.metadata) {
+      const { duration, adSegments, adPercentage } = audioResponse.metadata
+      result.metadata.duration = duration || '00:00:00'
+      result.metadata.adSegments = adSegments || []
+      result.metadata.adPercentage = adPercentage || 0
+    }
 
     // Symulacja przetwarzania - w rzeczywistości tutaj byłoby wywołanie API do przetwarzania audio
     // Na potrzeby demonstracji tworzymy pliki z różnymi nazwami
